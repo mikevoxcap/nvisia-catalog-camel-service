@@ -67,8 +67,19 @@ public class CatalogItemAttribute {
     */
    @Override
    public String toString() {
-      return "CatalogItemAttribute [attributeName=" + attributeName + ", attributeValue="
-            + attributeValue + "]";
+      StringBuilder builder = new StringBuilder();
+      builder.append("CatalogItemAttribute [");
+      if (attributeName != null) {
+         builder.append("attributeName=");
+         builder.append(attributeName);
+         builder.append(", ");
+      }
+      if (attributeValue != null) {
+         builder.append("attributeValue=");
+         builder.append(attributeValue);
+      }
+      builder.append("]");
+      return builder.toString();
    }
 
 }

@@ -12,7 +12,7 @@ public class CatalogItem {
 
    private int id;
    private double price;
-   private String catalogItemType;
+   private CatalogItemType catalogItemType;
    private List<CatalogItemAttribute> attributes;
 
    /**
@@ -30,7 +30,7 @@ public class CatalogItem {
     * @param catalogItemType
     * @param attributes
     */
-   public CatalogItem(int id, double price, String catalogItemType,
+   public CatalogItem(int id, double price, CatalogItemType catalogItemType,
          List<CatalogItemAttribute> attributes) {
       super();
       this.id = id;
@@ -72,7 +72,7 @@ public class CatalogItem {
    /**
     * @return the catalogItemType
     */
-   public String getCatalogItemType() {
+   public CatalogItemType getCatalogItemType() {
       return catalogItemType;
    }
 
@@ -80,7 +80,7 @@ public class CatalogItem {
     * @param catalogItemType
     *           the catalogItemType to set
     */
-   public void setCatalogItemType(String catalogItemType) {
+   public void setCatalogItemType(CatalogItemType catalogItemType) {
       this.catalogItemType = catalogItemType;
    }
 
@@ -97,6 +97,32 @@ public class CatalogItem {
     */
    public void setAttributes(List<CatalogItemAttribute> attributes) {
       this.attributes = attributes;
+   }
+
+   /*
+    * (non-Javadoc)
+    * 
+    * @see java.lang.Object#toString()
+    */
+   @Override
+   public String toString() {
+      StringBuilder builder = new StringBuilder();
+      builder.append("CatalogItem [id=");
+      builder.append(id);
+      builder.append(", price=");
+      builder.append(price);
+      builder.append(", ");
+      if (catalogItemType != null) {
+         builder.append("catalogItemType=");
+         builder.append(catalogItemType);
+         builder.append(", ");
+      }
+      if (attributes != null) {
+         builder.append("attributes=");
+         builder.append(attributes);
+      }
+      builder.append("]");
+      return builder.toString();
    }
 
 }

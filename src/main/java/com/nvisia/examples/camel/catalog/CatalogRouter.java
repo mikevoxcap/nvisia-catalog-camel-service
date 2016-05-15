@@ -11,7 +11,8 @@ import org.springframework.boot.context.embedded.*;
 import org.springframework.context.annotation.*;
 
 /**
- * Spring boot application that defines the routes available for catalog services
+ * Spring boot application that defines the routes available for catalog
+ * services
  * 
  * @author Michael Hoffman, NVISIA
  *
@@ -44,14 +45,11 @@ public class CatalogRouter extends FatJarRouter {
             apiProperty("host", "localhost:8080").
             // Set base path
             apiProperty("base.path", "nvisia-catalog-camel-service/api");
-      configureGetCatalogItem();
-   }
 
-   protected void configureGetCatalogItem() {
       // Definition of the get catalog item endpoint
       rest("/catalogItem").
             // This is a GET method call for getting a catalog item by ID.
-      get("{id}").
+            get("{id}").
             // Description of what this method does
             description("Retrieve a catalog item by ID").
             // Define the output type that will be returned from this method

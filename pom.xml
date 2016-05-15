@@ -12,9 +12,6 @@
 
 	<name>nvisia-catalog-camel-service</name>
 	<url>http://www.nvisia.com</url>
-	<description>
-		Example that leverages Apache Camel and Spring Boot to expose catalog REST services
-	</description>
 	<organization>
 		<name>NVISIA</name>
 		<url>http://www.nvisia.com</url>
@@ -188,4 +185,10 @@
 			</plugin>
 		</plugins>
 	</build>
+	<scm>
+		<url>https://github.com/mikevoxcap/nvisia-catalog-camel-service</url>
+		<developerConnection>Michael Hoffman</developerConnection>
+	</scm>
+	<inceptionYear>2016</inceptionYear>
+	<description>A Microservice focused on catalog items. This is just an example service that leverages Apache Camel on Spring Boot to expose REST services using the Camel REST DSL. </description>
 </project>
